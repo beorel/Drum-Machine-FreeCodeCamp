@@ -1,12 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { applyMiddleware, createStore } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension'
+import { Provider } from 'react-redux';
+import togglesReducer from './drumReducer';
+import Drum from './drum';
+import logger from 'redux-logger'
 
+
+const store = createStore(togglesReducer, applyMiddleware(logger));
+
+// const composedEnhancer = composeWithDevTools (
+//   applyMiddleware(logger)
+// )
+// const store = createStore(togglesReducer, composedEnhancer);
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <Drum />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
