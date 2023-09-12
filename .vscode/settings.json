@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/66c016a8-8419-45ec-9da0-324bd803715b/resourceGroups/beauty/providers/Microsoft.Web/sites/beautyWebApp",
+    "appService.deploySubpath": "."
+}

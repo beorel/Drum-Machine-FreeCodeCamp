@@ -10,13 +10,15 @@ import Grid from '@mui/material/Grid';
 const Drum = () => {
     return (
         < Stack
-            direction="row"
-            justifyContent="center"
-            margin={35}
+            //direction="row"
+            //justifyContent="center"
+            margin={{ xs: 5, sm: 35 }}
             sx={{ border: '9px groove yellow', backgroundColor: 'darkgrey' }}
+            direction={{ xs: "row"}}
+            justifyContent={{ xs:"center"}}
         >
             <Stack
-                margin={3}
+                margin={{ xs: 1, sm:3 }}
                 //sx={{ border: '1px dashed blue', }}
                 >
                 <Grid container spacing={2}>

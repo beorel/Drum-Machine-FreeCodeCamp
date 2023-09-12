@@ -1,4 +1,5 @@
 export const playSoundAction = (payloadvalue) => {
+    console.log(payloadvalue)
     return {
         type: 'PLAYSOUND',
         payload: payloadvalue
